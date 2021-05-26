@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Pryorcapo | List To Do</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body onload="load()">
+
+		<section id="wrapper">
+				<div class="top-wrapper">
+					<nav class="navbar">
+					  <div class="container-fluid">
+					    <span class="navbar-brand mb-0">To do</span>
+							<div class="darkmode">
+						    <div class="light"><img src="assets/light.svg" alt="lightmode"></div>
+						    <div class="dark"><img src="assets/dark.svg" alt="darkmode"></div>
+						  </div>
+					  </div>
+					</nav>
+				</div>
+
+				<div class="date-wrapper">
+					<div class="header-box currentdate">
+						<h1 class="date" id="date"></h1>
+						<h2 class="day" id="day"></h2>
+					</div>
+					<div class="header-box task-counter" id="task-counter">
+						<!-- <img src="assets/header.png" alt="tasks"> -->
+						
+						<h3>Task Pending</h3>
+					</div>
+				</div>
+
+				<div class="input-wrapper">
+					<form class="form" id="form">
+			      		<input type="text" name="add" id="add" class="form-input" placeholder="Type anything...">
+						<button style="display:flex; border:none;" type="submit" id="submit"><img src="assets/add.svg" alt="add"></button>
+					</form>
+
+				</div>
+
+				<div class="task-wrapper" id="task-wrapper">
+					
+				</div>
+		</section>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

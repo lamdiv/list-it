@@ -1,0 +1,253 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Sheppards&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/*
+font-family: 'Mrs Sheppards';
+font-family: 'Poppins';
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #2D3142;
+  color: #ffffff;
+  font-family: 'Poppins';
+}
+
+
+
+
+/* DARK & LIGHT MODE */
+.dark {
+  background: #fff;
+  color: #000;
+}
+.dark .darkmode .light, body:not(.dark) .darkmode .dark {
+  display: none;
+}
+/* DARK & LIGHT MODE */
+
+/* TOP WRAPPER */
+.navbar {
+  padding: 0 0.3rem;
+}
+.navbar-brand {
+  font-family: 'Mrs Sheppards';
+  font-size: 3rem;
+  letter-spacing: 3px;
+}
+.darkmode img {
+  width: 30px;
+}
+/* TOP WRAPPER */
+
+/* DATE WRAPPER */
+.date-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.header-box {
+  width: 100%;
+  margin: 1rem;
+  background: #2D3142;
+  box-shadow: -5px -5px 10px 3px #2F3747, 5px 5px 10px 3px #222730;
+  border-radius: 15px;
+}
+
+/* DATE */
+.currentdate {
+  text-align: center;
+  padding-top: 1.5rem;
+}
+.date {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+.day {
+  font-size: 1.2rem;
+  color: #64BEFF;
+  font-weight: 600;
+}
+
+/* COUNTER */
+/* .task-counter {
+  position: relative;
+}
+.task-counter img {
+  overflow: hidden;
+  width: 100%;
+  height: 6rem;
+}
+.task-counter h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  position: absolute;
+  top: 25px;
+  right: 32px;
+} */
+
+.task-counter {
+  background-color: rgb(0 148 255 / 50%);
+  color: #fff;
+}
+.task-counter h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+}
+.task-counter h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Poppins';
+  letter-spacing: 2px;
+  text-align: center;
+}
+/* DATE WRAPPER */
+
+
+/* INPUT WRAPPER */
+.form {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.form input {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  box-shadow: inset 0.3rem 0.3rem 0.8rem #262937, inset -0.3rem -0.3rem 0.5rem #34394d;
+  background: none;
+  font-family: 'Poppins';
+  color: #cccccc;
+}
+.form input::placeholder {
+  color: #999999;
+}
+.form input:focus {
+  outline: none;
+  box-shadow: 0.3rem 0.3rem 0.6rem #262937, -0.2rem -0.2rem 0.5rem #34394d;
+}
+
+.form img {
+  width: 3rem;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgb(100 190 255 / 90%);
+  border-radius: 50%;
+}
+/* INPUT WRAPPER */
+
+
+
+/* TASK WRAPPER */
+.task-wrapper {
+  height: 25rem;
+  overflow-y: scroll;
+  width: 96%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.task-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.task-box {
+  background: #2D3142;
+  box-shadow: -7px -7px 25px #34394d, 5px 5px 15px #222730;
+  border-radius: 13px;
+  padding: 1rem;
+  margin: 1.2rem 0;
+}
+.description {
+  padding-right: 1rem;
+  text-transform: capitalize;
+  float: left;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.delete {
+  width: 1.8rem;
+  float: right;
+}
+.clear {
+  clear: both;
+}
+
+/* TASK WRAPPER */
+
+
+/* LIGHT MODE */
+/*
+.task-box {
+  background: #fff;
+  box-shadow: -5px -5px 10px #f9f9f9, 5px 5px 15px #EFEFEF;
+  border-radius: 13px;
+  padding: 1rem;
+  margin: 1.2rem 0;
+}
+
+.header-box {
+  width: 100%;
+  margin: 1rem;
+  background: #ffffff;
+  box-shadow: -5px -5px 10px 3px #F9F9F9, 5px 5px 10px 3px #F6F1F1;
+  border-radius: 15px;
+}
+.task-counter {
+  background-color: rgb(0 148 255 / 50%);
+  color: #fff;
+}
+.form {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.form input {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  box-shadow: inset 0.3rem 0.3rem 0.8rem #eaeaea, inset -0.3rem -0.3rem 0.5rem #ffffff;
+  background: none;
+  font-family: 'Poppins';
+  color: #000;
+}
+.form input::placeholder {
+  color: #888;
+}
+.form input:focus {
+  outline: none;
+  box-shadow: 0.3rem 0.3rem 0.6rem #F5F5F5, -0.2rem -0.2rem 0.5rem #ffffff;
+}
+.form img {
+  width: 3rem;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgb(100 190 255 / 90%);
+  border-radius: 50%;
+} */
+/* LIGHT MODE */
+
+
+
+
+
+
+@media (min-width: 576px) {
+
+}
