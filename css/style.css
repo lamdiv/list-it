@@ -1,7 +1,6 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Mrs+Sheppards&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /*
-font-family: 'Mrs Sheppards';
+font-family: 'Poiret One';
 font-family: 'Poppins';
 */
 
@@ -17,34 +16,30 @@ body {
 }
 
 
-
-
-/* DARK & LIGHT MODE */
-.dark {
-  background: #fff;
-  color: #000;
+#wrapper {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 3rem;
+  box-shadow: -5px -5px 10px 3px #2f3747, 5px 5px 10px 3px #222730;
+  border-radius: 20px;
 }
-.dark .darkmode .light, body:not(.dark) .darkmode .dark {
-  display: none;
-}
-/* DARK & LIGHT MODE */
 
 /* TOP WRAPPER */
 .navbar {
   padding: 0 0.3rem;
 }
 .navbar-brand {
-  font-family: 'Mrs Sheppards';
+  font-family: 'Poiret One';
+  -webkit-text-stroke: 0.5px #fff;
   font-size: 3rem;
-  letter-spacing: 3px;
-}
-.darkmode img {
-  width: 30px;
+  letter-spacing: 2px;
 }
 /* TOP WRAPPER */
 
 /* DATE WRAPPER */
 .date-wrapper {
+  margin-top: 1rem;
   display: flex;
   flex-wrap: nowrap;
 }
@@ -72,23 +67,6 @@ body {
   color: #64BEFF;
   font-weight: 600;
 }
-
-/* COUNTER */
-/* .task-counter {
-  position: relative;
-}
-.task-counter img {
-  overflow: hidden;
-  width: 100%;
-  height: 6rem;
-}
-.task-counter h1 {
-  font-size: 4rem;
-  font-weight: 600;
-  position: absolute;
-  top: 25px;
-  right: 32px;
-} */
 
 .task-counter {
   background-color: rgb(0 148 255 / 50%);
@@ -122,7 +100,7 @@ body {
   border: none;
   border-radius: 15px;
   font-size: 1.1rem;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   box-shadow: inset 0.3rem 0.3rem 0.8rem #262937, inset -0.3rem -0.3rem 0.5rem #34394d;
   background: none;
   font-family: 'Poppins';
@@ -139,7 +117,7 @@ body {
 .form img {
   width: 3rem;
   position: absolute;
-  top: 14px;
+  top: 13.2px;
   right: 14px;
   background: rgb(100 190 255 / 90%);
   border-radius: 50%;
@@ -150,17 +128,16 @@ body {
 
 /* TASK WRAPPER */
 .task-wrapper {
-  height: 25rem;
+  height: 28rem;
   overflow-y: scroll;
   width: 96%;
   margin: 0 auto;
-  margin-top: 2rem;
+  padding: 1rem;
 }
 
 .task-wrapper::-webkit-scrollbar {
   display: none;
 }
-
 .task-box {
   background: #2D3142;
   box-shadow: -7px -7px 25px #34394d, 5px 5px 15px #222730;
@@ -187,67 +164,21 @@ body {
 /* TASK WRAPPER */
 
 
-/* LIGHT MODE */
-/*
-.task-box {
-  background: #fff;
-  box-shadow: -5px -5px 10px #f9f9f9, 5px 5px 15px #EFEFEF;
-  border-radius: 13px;
-  padding: 1rem;
-  margin: 1.2rem 0;
+@media (min-width: 100px) and (max-width: 1000px) {
+  #wrapper {
+    width: 100% !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
 }
 
-.header-box {
-  width: 100%;
-  margin: 1rem;
-  background: #ffffff;
-  box-shadow: -5px -5px 10px 3px #F9F9F9, 5px 5px 10px 3px #F6F1F1;
-  border-radius: 15px;
-}
-.task-counter {
-  background-color: rgb(0 148 255 / 50%);
-  color: #fff;
-}
-.form {
-  position: relative;
-  width: 95%;
-  margin: 0 auto;
-  margin-top: 2rem;
-}
-.form input {
-  width: 100%;
-  padding: 1.5rem 1rem;
-  border: none;
-  border-radius: 15px;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  box-shadow: inset 0.3rem 0.3rem 0.8rem #eaeaea, inset -0.3rem -0.3rem 0.5rem #ffffff;
-  background: none;
-  font-family: 'Poppins';
-  color: #000;
-}
-.form input::placeholder {
-  color: #888;
-}
-.form input:focus {
-  outline: none;
-  box-shadow: 0.3rem 0.3rem 0.6rem #F5F5F5, -0.2rem -0.2rem 0.5rem #ffffff;
-}
-.form img {
-  width: 3rem;
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  background: rgb(100 190 255 / 90%);
-  border-radius: 50%;
-} */
-/* LIGHT MODE */
-
-
-
-
-
-
-@media (min-width: 576px) {
-
+@media (max-width: 1399.98px) {
+  #wrapper {
+    width: 60%;
+    padding: 3rem;
+    box-shadow: -5px -5px 10px 3px #2F3747, 5px 5px 10px 3px #222730;
+    border-radius: 20px;
+  }
 }

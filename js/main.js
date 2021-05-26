@@ -1,27 +1,3 @@
-//DARK & LIGHT THEME
-const darkBtn = document.querySelector('.darkmode');
-const bodyEl = document.querySelector('body');
-
-const darkMode = () => {
-    bodyEl.classList.toggle('dark')
-}
-darkBtn.addEventListener('click', () => {
-    setDarkMode = localStorage.getItem('dark');
-
-    if(setDarkMode !== "on") {
-        darkMode();
-        setDarkMode = localStorage.setItem('dark', 'on');
-    } else {
-        darkMode();
-        setDarkMode = localStorage.setItem('dark', null);
-    }
-});
-let setDarkMode = localStorage.getItem('dark');
-if(setDarkMode === 'on') {
-    darkMode();
-}
-
-
 // ---------------- index.js -----------------
 
 var dayDate = new Date()
@@ -29,7 +5,7 @@ var dayDate = new Date()
 var date = document.getElementById('date');
 var day = document.getElementById('day')
 
-date.innerHTML = `${dayDate.getDate()} ${dayDate.toLocaleString('default', { month: 'long' })}, ${dayDate.getFullYear()}`;
+date.innerHTML = `${dayDate.toLocaleString('default', { month: 'long' })} ${dayDate.getDate()}, ${dayDate.getFullYear()}`;
 day.innerHTML = `${dayDate.toLocaleString('default', { weekday: 'long' })}`
 
 var form = document.getElementById('form');
@@ -73,14 +49,14 @@ function load(value,val){
         return (`<div class="task-box" onclick='edit(${index})'><h2 class="description">${i}</h2><img src="assets/delete.svg" class="delete" alt="delete" onclick='remove(${index})'><div class="clear"></div></div>`)
     }).join('')
     }
-												
 
-    function remove(rem){   
+
+    function remove(rem){
         var a = localStorage.getItem('add').split(',')
         var afterFil = a.filter((i,index)=>rem!=index)
         localStorage.setItem('add',afterFil)
         load()
-    }   
+    }
 
     function edit(rem){
         var a = localStorage.getItem('add').split(',')
@@ -89,4 +65,3 @@ function load(value,val){
         localStorage.setItem('index',rem)
         submit();
     }
-    
